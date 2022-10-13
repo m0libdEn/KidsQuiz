@@ -63,12 +63,13 @@ function generateQuation() {
         generateQuation()
     }
 
+    let allAnswers = makeAnswers(answer)
     //I perform a mathematical operation, after which they check for negative numbers (for subtraction and division, it is calculated that fractions and negative numbers are extremely difficult for children)
 
-    let notCorrectAnswer1 = Math.floor(Math.random()* 20)
-    let notCorrectAnswer2 = Math.floor(Math.random()* 20)
-    //I create two wrong answers
-    let allAnswers = [answer, notCorrectAnswer1, notCorrectAnswer2]
+    while(checkDuplicates(allAnswers)){
+      allAnswers = makeAnswers(answer)
+    }
+
     allAnswers.sort(function() {
         Math.random() - 0.5
     })
@@ -104,6 +105,18 @@ function generateQuation() {
     
 
   //Normal response check If the answer is correct, the following example is formed, if it is not correct, a sound is emitted
+}
+
+//Set can remove duplicate values from an array. Thanks to this, I check the length of these objects
+function checkDuplicates(array) {
+  return new Set(array).size !==array.length
+}
+
+function makeAnswers(answer) {
+  notCorrectAnswer1 = Math.floor(Math.random()* 10)
+  notCorrectAnswer2 = Math.floor(Math.random()* 10)
+  arrayOfAnswers = [] = [answer, notCorrectAnswer1, notCorrectAnswer2]
+  return arrayOfAnswers
 }
 
 generateQuation()
