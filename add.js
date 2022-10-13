@@ -118,5 +118,4 @@ function makeAnswers(answer) {
   arrayOfAnswers = [] = [answer, notCorrectAnswer1, notCorrectAnswer2]
   return arrayOfAnswers
 }
-
 generateQuation()
