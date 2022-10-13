@@ -107,7 +107,7 @@ function generateQuation() {
   //Normal response check If the answer is correct, the following example is formed, if it is not correct, a sound is emitted
 }
 
-//Set can remove duplicate values from an array. Thanks to this, I check the length of these objects
+//Set can remove duplicate values from an array. Thanks to this, I check the length of these objects - if it's not the same, that's mean that you t has some duplicates
 function checkDuplicates(array) {
   return new Set(array).size !==array.length
 }
