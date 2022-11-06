@@ -119,3 +119,15 @@ header {
     font-size: 90px;
   }
 }
+@media (max-width: 479.98px) {
+  .wrapper {
+    height: 100%;
+  }
+  .equation h1 {
+    font-size: 80px;
+    padding: 0;
+  }
+  .answer-option h1 {
+    font-size: 80px;
+  }
+}/*# sourceMappingURL=style.css.map */
